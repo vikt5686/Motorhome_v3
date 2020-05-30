@@ -1,4 +1,4 @@
-package com.example.demo.Utils;
+package com.example.demo.Util;
 
 
 
@@ -9,8 +9,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-import java.sql.Statement;
-import java.sql.ResultSet;
 
 public class DatabaseConnectionManager {
     private static String user;

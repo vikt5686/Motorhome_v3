@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Details for:</title>
+</head>
+<body>
+
+<h1>Customer:
+    <tr th:each="customer : ${customers}" th:action="@{/customers}" method="GET"> >
+        <span class="customerNameColor" th:text="${customer.firstName}"></span>&nbsp<span class="customerNameColor" th:text="${customer.lastName}"></span>
+
+</h1>
+
+<br><br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>CPR</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+
+    </tr>
+
+
+    <tr th:each="customer : ${customers}">
+        <th th:text="${customer.id}"></th>
+        <th th:text="${customer.firstName}"></th>
+        <th th:text="${customer.lastName}"></th>
+        <th th:text="${customer.cpr}"></th>
+        <th th:text="${customer.address}"></th>
+        <th th:text="${customer.phoneNumber}"></th>
+        <th th:text="${customer.email}"></th>
+
+
+
+    </tr>
+</table>
+</tr>
+
+</body>
+</html>

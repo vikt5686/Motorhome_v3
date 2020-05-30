@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Customer</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<h1>Edit customer
+    <tr th:each="customer : ${customers}" th:action="@{/customers}" method="GET"> >
+        <span class="customerNameColor" th:text="${customer.firstName}"></span>&nbsp<span class="customerNameColor" th:text="${customer.lastName}"></span>
+
+</h1>
+
+<div class="container">
+
+
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="ID">
+
+        <label for="firstName">Firstname</label>
+        <input type="text" id="firstName" name="firstName" placeholder="firstName">
+
+        <label for="lastName">Lastname</label>
+        <input type="text" id="lastName" name="lastName" placeholder="lastName">
+
+        <label for="cpr">CPR</label>
+        <input type="text" id="cpr" name="CPR" placeholder="CPR">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="Address" placeholder="Address">
+
+        <label for="phoneNumber">Phonenumber</label>
+        <input type="text" id="phoneNumber" name="Phonenumber" placeholder="Phonenumber">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="Email" placeholder="Email">
+
+        <input type="submit" value="Submit">
+
+    </tr>
+</div>
+
+</body>
+</html>

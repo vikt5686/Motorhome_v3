@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add motorhome</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Customer</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<h1>Add motorhome</h1>
+
+<div class="container">
+    <form th:customer="${motorhomeadd}" th:action="@{/motorhomeform}" method="post">
+
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="ID">
+
+        <label for="manufacturer">Manufacturer</label>
+        <input type="text" id="manufacturer" name="manufacturer" placeholder="Manufacturer">
+
+        <label for="model">Model</label>
+        <input type="text" id="model" name="model" placeholder="model">
+
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" placeholder="year">
+
+        <label for="seating">Seating</label>
+        <input type="text" id="seating" name="Seating" placeholder="Seating">
+
+        <label for="beds">Beds</label>
+        <input type="text" id="beds" name="Beds" placeholder="Beds">
+
+        <label for="mileage">Mileage</label>
+        <input type="text" id="mileage" name="Mileage" placeholder="Mileage">
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>

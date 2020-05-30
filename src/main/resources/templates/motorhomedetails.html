@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Customers</title>
+</head>
+<body>
+
+
+<h1>All Motorhomes:
+
+
+
+    <tr th:each="motorhome : ${motorhomes}" th:action="@{/motorhomes}" method="GET">
+
+</h1>
+
+<br><br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Seating</th>
+        <th>Beds</th>
+        <th>Mileage</th>
+
+
+    </tr>
+
+
+    <tr th:each="motorhome : ${motorhomes}">
+        <th th:text="${motorhome.id}"></th>
+        <th th:text="${motorhome.manufacturer}"></th>
+        <th th:text="${motorhome.model}"></th>
+        <th th:text="${motorhome.year}"></th>
+        <th th:text="${motorhome.seating}"></th>
+        <th th:text="${motorhome.beds}"></th>
+        <th th:text="${motorhome.mileage}"></th>
+        <td><a th:href="@{/detail(id=${motorhome.id})}"><button>Details</button></a></td>
+        <td><a th:href="@{/edit(id=${motorhome.id})}"><button>Edit</button></a></td>
+        <td><a th:href="@{/deletemotorhome(id=${motorhome.id})}"><button>Delete</button></a></td>
+
+
+    </tr>
+</table>
+</tr>
+
+</body>
+</html>
